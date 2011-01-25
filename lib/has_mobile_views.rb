@@ -25,7 +25,13 @@ module ActionController
       end
 
       def mobile_request?
-        session[:mobile_view] = mobile_browser? if session[:mobile_view].nil?
+        if params[:force_mobile_view].present?
+          session[:mobile_view] = true
+        elsif params[:force_normal_view].present?
+          session[:normal_view] = false
+        else
+          session[:mobile_view] = mobile_browser? if session[:mobile_view].nil?
+        end
         session[:mobile_view]
       end
 
