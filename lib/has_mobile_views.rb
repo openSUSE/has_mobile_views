@@ -27,17 +27,15 @@ module ActionController
       def mobile_request?
         session[:mobile_view] = mobile_browser? if session[:mobile_view].nil?
         if params[:force_view] == 'mobile' && !session[:mobile_view]
-          logger.debug "Switching session to mobile view output"
           session[:mobile_view] = true
         elsif params[:force_view] == 'normal' && session[:mobile_view]
-          logger.debug "Switching session to normal view output"
           session[:mobile_view] = false
         end
         session[:mobile_view]
       end
 
       def mobile_browser?
-        request.env["HTTP_USER_AGENT"] && request.env["HTTP_USER_AGENT"][/(iPhone|iPod|iPad|Android)/]
+        request.env["HTTP_USER_AGENT"] && !!request.env["HTTP_USER_AGENT"][/(iPhone|iPod|iPad|Android)/]
       end
     end
   end
