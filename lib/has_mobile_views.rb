@@ -35,7 +35,7 @@ module ActionController
       end
 
       def mobile_browser?
-        request.env["HTTP_USER_AGENT"] && !!request.env["HTTP_USER_AGENT"][/(iPhone|iPod|iPad|Android)/]
+        request.env["HTTP_USER_AGENT"] && !!request.env["HTTP_USER_AGENT"][/(iPhone|iPod|Android)/]
       end
     end
   end
