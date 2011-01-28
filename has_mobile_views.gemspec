@@ -1,6 +1,6 @@
 spec = Gem::Specification.new do |s|
   s.name              = "has_mobile_views"
-  s.version           = "0.0.1"
+  s.version           = "0.0.2"
   s.authors           = ["André Duffeck"]
   s.email             = ["aduffeck@suse.de"]
   s.homepage          = "http://github.com/aduffeck/has_mobile_views"
