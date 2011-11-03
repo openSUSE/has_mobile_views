@@ -12,7 +12,7 @@ Add the following line to your **config/environment.rb** file:
     config.gem 'has_mobile_views'
 
 ## As a plugin
-    script/plugin install git://github.com/aduffeck/has_mobile_views.git
+    script/plugin install git://github.com/openSUSE/has_mobile_views.git
 
 # Usage
 Just call the **has_mobile_views** class method in the *ApplicationController:*

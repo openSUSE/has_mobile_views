@@ -3,7 +3,7 @@ spec = Gem::Specification.new do |s|
   s.version           = "0.0.2"
   s.authors           = ["André Duffeck"]
   s.email             = ["aduffeck@suse.de"]
-  s.homepage          = "http://github.com/aduffeck/has_mobile_views"
+  s.homepage          = "http://github.com/openSUSE/has_mobile_views"
   s.summary           = "A Rails plugin which allows for rendering special templates for mobile devices."
   s.description       = <<-EOM
     This Rails plugin allows for rendering special templates for mobile devices, using the existing views and partials as a fallback.
